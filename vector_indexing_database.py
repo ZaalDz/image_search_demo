@@ -1,6 +1,3 @@
-import json
-import pickle
-
 import faiss
 import numpy as np
 

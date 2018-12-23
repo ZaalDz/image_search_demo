@@ -25,4 +25,3 @@ def extract_features(model, layer, image):
     model(transformed_image).detach().numpy()
     hook.remove()
     return features.detach().numpy()
-

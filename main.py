@@ -1,13 +1,13 @@
-from torchvision.models import resnet18
-from vector_indexing_database import init_db, insert_vector_and_id, find_vector, dump_db, restore_db_from_file
-from utils import extract_features
 from PIL import Image
+from torchvision.models import resnet18
+
+from utils import extract_features
+from vector_indexing_database import init_db, insert_vector_and_id, find_vector, dump_db, restore_db_from_file
 
 model = resnet18(pretrained=True)
 
 # mark layer to extract features
 feature_extraction_layer = model.fc
-
 
 indexed_database = init_db()
 
